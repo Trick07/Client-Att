@@ -1,0 +1,74 @@
+Logo < UIImageView
+  image-source: /images/entergame
+  image-smooth: false
+  image-fixed-ratio: true
+  size: 236 82
+
+EnterGameWindow < MainWindow
+  size: 269 280
+
+EnterGameButton < Button
+  width: 64
+
+EnterGameWindow
+  id: enterGame
+  !text: tr('Enter Game')
+  @onEnter: EnterGame.doLogin()
+  
+  Logo
+    anchors.left: parent.left
+    anchors.top: parent.top
+
+  MenuLabel
+    !text: tr('Conta')
+    anchors.left: parent.left
+    anchors.top: parent.top
+    margin-top: 87
+    text-auto-resize: true
+
+  TextEdit
+    id: accountNameTextEdit
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+
+  MenuLabel
+    !text: tr('Senha')
+    anchors.left: prev.left
+    anchors.top: prev.bottom
+    margin-top: 8
+    text-auto-resize: true
+
+  PasswordTextEdit
+    id: accountPasswordTextEdit
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+
+  CheckBox
+    id: rememberPasswordBox
+    !text: tr('Remember password')
+    !tooltip: tr('Remember account and password when starts client')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 10
+    @onCheckChange: self:getParent():getChildById('autoLoginBox'):setEnabled(self:isChecked())
+
+  CheckBox
+    id: autoLoginBox
+    enabled: false
+    !text: tr('Auto login')
+    !tooltip: tr('Open charlist automatically when starting client')
+    anchors.left: parent.left
+    anchors.right: parent.right
+    anchors.top: prev.bottom
+    margin-top: 2
+
+  EnterGameButton
+    !text: tr('Ok')
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    @onClick: EnterGame.doLogin()

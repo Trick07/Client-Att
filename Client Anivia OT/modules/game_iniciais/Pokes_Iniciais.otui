@@ -1,0 +1,70 @@
+NewPokeIcon < UIButton
+  width: 35
+  height: 35
+  anchors.top: parent.top
+  margin-top: 5
+  font: verdana-11px-rounded
+  color: #FFFFFF
+  text-align: right
+
+MainWindow
+  id: Window
+  !text: tr('Choose your new pokemon!')
+  size: 240 125
+  --@onClose: onMiniWindowClose()
+  draggable: false
+  focusable: false
+  &save: true
+
+  NewPokeIcon
+    id: Icon1
+    anchors.left: parent.left
+    margin-left: 20
+    @onClick: click(1)
+    image-source: imgs/Pidgey.png
+  NewPokeIcon
+    id: Icon2
+    anchors.left: prev.left
+    margin-left: 44
+    @onClick: click(2)
+    image-source: imgs/Spearow.png
+  NewPokeIcon
+    id: Icon3
+    anchors.left: prev.left
+    margin-left: 44
+    @onClick: click(3)
+    image-source: imgs/Oddish.png
+  NewPokeIcon
+    id: Icon4
+    anchors.left: prev.left
+    margin-left: 44
+    @onClick: click(4)
+    image-source: imgs/Bellsprout.png
+  NewPokeIcon
+    id: Icon5
+    anchors.left: parent.left
+    margin-left: 20
+    margin-top: 45
+    @onClick: click(5)
+    image-source: imgs/Hoppip.png
+  NewPokeIcon
+    id: Icon6
+    anchors.left: prev.left
+    margin-left: 44
+    margin-top: 45
+    @onClick: click(6)
+    image-source: imgs/Sunkern.png
+  NewPokeIcon
+    id: Icon7
+    anchors.left: prev.left
+    margin-left: 44
+    margin-top: 45
+    @onClick: click(7)
+    image-source: imgs/Sentret.png
+  NewPokeIcon
+    id: Icon8
+    anchors.left: prev.left
+    margin-left: 44
+    margin-top: 45
+    @onClick: click(8)
+    image-source: imgs/Remoraid.png

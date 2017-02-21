@@ -1,0 +1,93 @@
+Panel
+  HorizontalSeparator
+    height: 7
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: parent.right
+    margin-top: -12
+
+  VerticalScrollBar
+    id: scrollBar
+    step: 50
+    pixels-scroll: true
+    anchors.top: parent.top
+    anchors.right: parent.right
+    anchors.bottom: parent.bottom
+    margin-bottom: 30
+    margin-top: 60
+
+  ScrollablePanel
+    vertical-scrollbar: scrollBar
+    anchors.top: parent.top
+    anchors.left: parent.left
+    anchors.right: scrollBar.left
+    anchors.bottom: parent.bottom
+    margin-right: 3
+    margin-bottom: 30
+    margin-top: 60
+
+    Button1
+      id: 2
+      !tooltip: tr('Arcanine')
+      image-source: /images/shop/shop/2
+      width: 415
+      height: 48
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 0
+      @onClick: g_game.talk("!buyaddon1") 
+
+    Button1
+      id: 3
+      !tooltip: tr('Blastoise')
+      image-source: /images/shop/shop/3
+      width: 415
+      height: 48
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 50
+      @onClick: g_game.talk("!buyaddon2") 
+
+    Button1
+      id: 4
+      !tooltip: tr('Charizard')
+      image-source: /images/shop/shop/4
+      width: 415
+      height: 48
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 100
+      @onClick: g_game.talk("!buyaddon3") 
+
+    Button1
+      id: 5
+      !tooltip: tr('Electabuzz')
+      image-source: /images/shop/shop/5
+      width: 415
+      height: 48
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 150
+      @onClick: g_game.talk("!buyaddon4") 
+
+    Button1
+      id: 14
+      !tooltip: tr('Shiny Nidoking')
+      image-source: /images/shop/shop/14
+      width: 415
+      height: 48
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 200
+      @onClick: g_game.talk("!buyaddon5")
+
+    Button1
+      id: 16
+      !tooltip: tr('Shiny Golem')
+      image-source: /images/shop/shop/16
+      width: 415
+      height: 48
+      anchors.top: parent.top
+      anchors.left: parent.left
+      margin-top: 250
+      @onClick: g_game.talk("!buyaddon6")
